@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState, createContext } from "react"
+import { createContext, useState, PropsWithChildren } from "react"
 
 interface Endereco {
     uf: string,
@@ -17,11 +17,8 @@ export default function TabDeEnderecoContextProvider(props: PropsWithChildren){
     const [cep, setCep] = useState("")
 
     return<>
-    
         <TabDeEnderecoContext.Provider value = {{uf, setUf, cidade, setCidade, cep, setCep}}>
-
             {props.children}
-
         </TabDeEnderecoContext.Provider>
     </>
 }
